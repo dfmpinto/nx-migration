@@ -1,0 +1,20 @@
+{
+  "name": "mylibA",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/mylibA/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/mylibA",
+        "main": "libs/mylibA/src/index.ts",
+        "tsConfig": "libs/mylibA/tsconfig.lib.json",
+        "assets": ["libs/mylibA/*.md"],
+        "format": ["cjs"]
+      }
+    }
+  }
+}
